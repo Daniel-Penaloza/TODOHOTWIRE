@@ -1,0 +1,17 @@
+<table>
+  <thead>
+    <tr>
+      <th>Category Name</th>
+      <th>Show</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @categories.each do |category| %>
+    <tr>
+        <td><%= category.name %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
