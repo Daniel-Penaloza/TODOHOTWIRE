@@ -1,7 +1,6 @@
 class CategoryItemsController < ApplicationController
   before_action :set_category
   def index
-    puts params
     @category_items = @category.category_items.all
   end
 
