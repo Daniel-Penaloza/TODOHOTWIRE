@@ -1,6 +1,8 @@
 class CategoryItemsController < ApplicationController
+  before_action :set_category
   def index
-    @categories = Category.all
+    puts params
+    @category_items = @category.category_items.all
   end
 
   def show
@@ -23,5 +25,9 @@ class CategoryItemsController < ApplicationController
 
   private
     def category_params
+    end
+
+    def set_category
+      @category = Category.find(params[:category_id])
     end
 end

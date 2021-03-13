@@ -10,3 +10,5 @@
 <%= link_to 'Back', categories_path %>
 
 <hr>
+
+<%= turbo_frame_tag 'category-items-list', src: category_category_items_path(@category) %>
